@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^lista/$', views.lista, name='lista'),
     url(r'^ngramas/$', views.ngramas, name='ngramas'),
-    url(r'^(?P<called_path>\w+)/$', views.front_controller, name='front_controller'),
+    url(r'^(?P<called_path>\w+)/\w+$', views.front_controller, name='front_controller'),
     # Examples:
     # url(r'^$', 'fcnltk.views.home', name='home'),
     # url(r'^fcnltk/', include('fcnltk.foo.urls')),
