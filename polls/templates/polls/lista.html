@@ -1,5 +1,11 @@
 <p>== LISTA VIEW ==</p>
 <p>O texto contido no link default é processado gerando uma lista de palavras:</p>
 {% if view %}
-    {{ view }}
+    <ul>
+        {% for palavra in view %}
+            <li>{{ palavra }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>O texto não foi recebido.</p>
 {% endif %}

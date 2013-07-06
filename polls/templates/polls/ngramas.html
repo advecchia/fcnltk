@@ -1,5 +1,11 @@
 <p>== NGRAMAS VIEW ==</p>
 <p>O texto contido no link default é processado gerando um conjunto de n-gramas de tamanho 3:</p>
 {% if view %}
-    {{ view }}
+    <ul>
+        {% for lista in view %}
+            <li>{{ lista.0 }} {{ lista.1 }} {{ lista.2 }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>O texto não foi recebido.</p>
 {% endif %}
